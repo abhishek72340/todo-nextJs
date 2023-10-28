@@ -17,9 +17,9 @@ dispatch(removeUser())
     <div className={'w-[90vw] h-[15rem] border border-sky-400 p-5'}>
   <span className={'text-xl text-sky-400 italic'}>Display Users</span>
       {
-        users.map((user)=>{
+        users.map((user,index)=>{
           return(
-            <div key={user.id}>
+            <div key={index}>
  <span>{user.name}<AiOutlineDelete onClick={()=>dispatch(removeUser(user.id))} className={'inline cursor-inline'}/></span>
 
             </div>
