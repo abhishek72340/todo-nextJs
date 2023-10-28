@@ -3,8 +3,12 @@ import {useSelector} from 'react-redux'
 import {AiOutlineDelete} from 'react-icons/ai'
 import {removeUser} from '../redux/slice'
 import {useDispatch} from 'react-redux';
+
+type RootState = {
+  user: (string | number)[];
+};
 const DisplayUsers:React.FC = () => {
-  const users:(string | number)[]=useSelector(state=>state.user)
+  const users:(string | number)[]=useSelector((state:RootState)=>state.user)
 const dispatch=useDispatch();
   const removeHandler=()=>{
 dispatch(removeUser())

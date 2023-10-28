@@ -2,7 +2,7 @@
 import { createSlice, nanoid } from '@reduxjs/toolkit';
 
 const initialState:(string|number)[] = {
-  user: [],
+  user:[],
 };
 
 export const userSlice:any = createSlice({
