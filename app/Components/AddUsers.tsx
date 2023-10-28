@@ -6,7 +6,7 @@ const AddUsers = () => {
  const [input,setInput]=useState<string>('')
 
  const dispatch=useDispatch();
- const submitHandler=(e)=>{
+ const submitHandler=(e: React.FormEvent<HTMLFormElement>)=>{
   e.preventDefault();
   input.trim()?dispatch(addUser(input)):null
   setInput('')
