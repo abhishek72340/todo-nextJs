@@ -6,7 +6,7 @@ import {useDispatch} from 'react-redux';
 const DisplayUsers:React.FC = () => {
   const users:string=useSelector((state:(string | number)[])=>state.user)
 const dispatch:any=useDispatch();
-  const removeHandler=(event):void=>{
+  const removeHandler=(event:any)=>{
 dispatch(removeUser())
   }
   return (
