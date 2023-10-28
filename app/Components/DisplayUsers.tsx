@@ -6,7 +6,7 @@ import {useDispatch} from 'react-redux';
 const DisplayUsers:React.FC = () => {
   const users:string=useSelector((state:(string | number)[])=>state.user)
 const dispatch:any=useDispatch();
-  const removeHandler=(event: React.MouseEvent<HTMLButtonElement>):void=>{
+  const removeHandler=(event):void=>{
 dispatch(removeUser())
   }
   return (
