@@ -5,7 +5,7 @@ import {removeUser} from '../redux/slice'
 import {useDispatch} from 'react-redux';
 
 type RootState = {
-  user: (string | number)[];
+  user:any;
 };
 const DisplayUsers:React.FC = () => {
   const users:(string | number)[]=useSelector((state:RootState)=>state.user)
@@ -20,7 +20,7 @@ dispatch(removeUser())
         users.map((user,index)=>{
           return(
             <div key={index}>
- <span>{user.name}<AiOutlineDelete onClick={()=>dispatch(removeUser(user.id))} className={'inline cursor-inline'}/></span>
+ <span>{user.name}<AiOutlineDelete onClick={()=>dispatch(removeUser(user.id))} className={'inline cursor-pointer'}/></span>
 
             </div>
           )
