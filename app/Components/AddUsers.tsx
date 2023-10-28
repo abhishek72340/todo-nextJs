@@ -5,7 +5,7 @@ import {addUser} from '../redux/slice'
 const AddUsers = () => {
  const [input,setInput]=useState<string>('')
 
- const dispatch:any=useDispatch();
+ const dispatch=useDispatch();
  const submitHandler=(e)=>{
   e.preventDefault();
   input.trim()?dispatch(addUser(input)):null

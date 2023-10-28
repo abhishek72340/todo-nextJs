@@ -5,7 +5,7 @@ import {removeUser} from '../redux/slice'
 import {useDispatch} from 'react-redux';
 const DisplayUsers:React.FC = () => {
   const users:string=useSelector((state:(string | number)[])=>state.user)
-const dispatch:any=useDispatch();
+const dispatch=useDispatch();
   const removeHandler=()=>{
 dispatch(removeUser())
   }
