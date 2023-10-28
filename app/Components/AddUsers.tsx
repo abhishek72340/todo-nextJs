@@ -6,8 +6,8 @@ const AddUsers = () => {
  const [input,setInput]=useState<string>('')
 
  const dispatch:any=useDispatch();
- const submitHandler=(event)=>{
-  event.preventDefault();
+ const submitHandler=(e)=>{
+  e.preventDefault();
   input.trim()?dispatch(addUser(input)):null
   setInput('')
  }
